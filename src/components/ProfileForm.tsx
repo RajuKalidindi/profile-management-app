@@ -51,7 +51,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
 						required: "Email is required",
 						pattern: {
 							value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-							message: "Email is not valid",
+							message: "Invalid email address",
 						},
 					})}
 					className="w-full p-2 mb-2 border rounded"

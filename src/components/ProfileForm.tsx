@@ -13,7 +13,6 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
 		formState: { errors, isValid },
 	} = useForm<Profile>();
 	const onSubmitForm: SubmitHandler<Profile> = (data) => {
-		console.log(data);
 		onSubmit(data);
 	};
 

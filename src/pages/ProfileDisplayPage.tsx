@@ -126,7 +126,7 @@ const ProfileDisplayPage = () => {
 			<div className="flex">
 				<div className="w-1/3 p-8 flex flex-col items-center">
 					<img
-						src="src/assets/portrait-man.jpg"
+						src="src/assets/portrait_man.jpg"
 						alt="Profile Avatar"
 						className="rounded-full h-64 w-64 object-scale-down mb-4"
 					/>

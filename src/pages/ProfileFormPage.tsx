@@ -123,7 +123,7 @@ const ProfileFormPage = () => {
 			<div className="max-h-screen bg-gray-100 flex rounded-[10px] p-24">
 				<div className="hidden lg:block shadow-lg rounded-lg lg:w-1/2">
 					<img
-						src="src/assets/Form_image.jpg"
+						src="src/assets/form_image.jpg"
 						alt="Desk image"
 						className="object-cover w-full h-full rounded-l-[10px]"
 					/>

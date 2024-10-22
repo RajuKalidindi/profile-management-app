@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -9,10 +9,12 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import { ProfileContext } from "../context/ProfileContext";
 
 const NavBar = () => {
 	const [currentUser, setCurrentUser] = useState<string | null>(null);
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+	const profile = useContext(ProfileContext);
 
 	const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorEl(event.currentTarget);
@@ -43,7 +45,7 @@ const NavBar = () => {
 		return () => {
 			window.removeEventListener("storage", handleStorageChange);
 		};
-	}, []);
+	}, [profile]);
 
 	return (
 		<AppBar position="static">

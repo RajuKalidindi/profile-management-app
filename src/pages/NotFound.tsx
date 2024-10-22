@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import NavBar from "../components/NavBar";
 
 const NotFound = () => {
-	const navigate = useNavigate();
 	return (
 		<>
 			<NavBar />
@@ -15,7 +14,8 @@ const NotFound = () => {
 					Kindly please head to the profile page.
 				</p>
 				<Button
-					onClick={() => navigate("/profile")}
+					component={Link}
+					to="/profile"
 					className="py-2 px-4 rounded"
 					variant="outlined"
 					children="Go to Profile"

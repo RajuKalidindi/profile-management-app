@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProfileDisplay from "../components/ProfileDisplay";
@@ -111,7 +111,8 @@ const ProfileDisplayPage = () => {
 						Kindly please submit the form to create a profile.
 					</p>
 					<Button
-						onClick={() => navigate("/profile-form")}
+						component={Link}
+						to="/profile-form"
 						className="py-2 px-4 rounded"
 						variant="outlined"
 						children="Go to Form"

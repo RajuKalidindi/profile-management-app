@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import { Profile } from "../types/types";
 
 interface ProfileFormProps {
@@ -24,6 +24,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
 				</label>
 				<input
 					id="name"
+					aria-label="name"
 					type="text"
 					{...register("name", {
 						required: "Name is required",
@@ -45,6 +46,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
 				</label>
 				<input
 					id="email"
+					aria-label="email"
 					type="email"
 					{...register("email", {
 						required: "Email is required",
@@ -64,6 +66,7 @@ const ProfileForm = ({ onSubmit }: ProfileFormProps) => {
 				<label>Age</label>
 				<input
 					id="age"
+					aria-label="age"
 					type="number"
 					{...register("age", {
 						min: {

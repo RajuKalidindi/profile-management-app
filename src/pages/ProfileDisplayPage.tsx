@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ProfileDisplay from "../components/ProfileDisplay";
 import { ProfileContext } from "../context/ProfileContext";
 import { Profile } from "../types/types";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import NavBar from "../components/NavBar";
 
 const ProfileDisplayPage = () => {

@@ -3,7 +3,7 @@ import { ProfileContext } from "../context/ProfileContext";
 import { Profile } from "../types/types";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 
 const ProfileDisplay = () => {
 	const context = useContext(ProfileContext);
@@ -102,6 +102,7 @@ const ProfileDisplay = () => {
 					</label>
 					<input
 						id="name"
+						aria-label="name"
 						type="text"
 						{...register("name", {
 							required: "Name is required",
@@ -125,6 +126,7 @@ const ProfileDisplay = () => {
 					</label>
 					<input
 						id="email"
+						aria-label="email"
 						type="email"
 						{...register("email", {
 							required: "Email is required",
@@ -145,6 +147,7 @@ const ProfileDisplay = () => {
 					<label>Age</label>
 					<input
 						id="age"
+						aria-label="age"
 						type="number"
 						{...register("age", {
 							min: {

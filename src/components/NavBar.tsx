@@ -24,27 +24,17 @@ const NavBar = () => {
 		setAnchorEl(null);
 	};
 
-	const updateUserFromLocalStorage = () => {
-		const userData = localStorage.getItem("profileData");
-		if (userData) {
-			const parsedData = JSON.parse(userData);
-			setCurrentUser(parsedData.name || null);
-		} else {
-			setCurrentUser(null);
-		}
-	};
-
 	useEffect(() => {
-		updateUserFromLocalStorage();
-		const handleStorageChange = (event: StorageEvent) => {
-			if (event.key === "profileData") {
-				updateUserFromLocalStorage();
+		const updateUserFromLocalStorage = () => {
+			const userData = localStorage.getItem("profileData");
+			if (userData) {
+				const parsedData = JSON.parse(userData);
+				setCurrentUser(parsedData.name || null);
+			} else {
+				setCurrentUser(null);
 			}
 		};
-		window.addEventListener("storage", handleStorageChange);
-		return () => {
-			window.removeEventListener("storage", handleStorageChange);
-		};
+		updateUserFromLocalStorage();
 	}, [profile]);
 
 	return (

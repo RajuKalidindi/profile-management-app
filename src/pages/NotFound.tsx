@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import NavBar from "../components/NavBar";
 
 const NotFound = () => {

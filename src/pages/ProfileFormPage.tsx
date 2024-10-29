@@ -86,6 +86,7 @@ const ProfileFormPage = () => {
 						theme: "dark",
 					});
 					setProfile(result);
+					localStorage.setItem("profileData", JSON.stringify(result));
 					navigate("/profile");
 				} else {
 					const errorData = await putResponse.json();
